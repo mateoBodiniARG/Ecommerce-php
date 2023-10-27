@@ -9,12 +9,13 @@
 <body>
 <h2>Iniciar Sesión</h2>
 <section class="formLogin">
-    <form method="POST" action="loginProceso.php">
+    <form method="POST" action="./loginProceso.php">
         <label for="usuario">Usuario:</label>
         <input type="text" name="usuario" required><br>
         <label for="contrasena">Contraseña:</label>
         <input type="password" name="contrasena" required><br>
         <input type="submit" value="Iniciar Sesión">
+        <a href="../Home/home.html">Regresar a la home</a>
     </form>
 </section>
     

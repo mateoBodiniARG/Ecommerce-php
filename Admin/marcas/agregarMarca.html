@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Agregar Nueva Marca</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Agregar Nueva Marca</h2>
+        <form action="procesarMarca.php" method="post" onsubmit="return validarMarca()">
+            <label for="nombre">Nombre de la Marca:</label>
+            <input type="text" name="nombre" id="nombre" required>
+            <button type="submit">Agregar Marca</button>
+            <a href="../panelAdmin.php" class="regresarPanel">Regresar al panel</a>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
