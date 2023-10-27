@@ -101,7 +101,9 @@
         
         echo '</div>';
         echo '</div>';
+        
     }
+    echo '<a href="../panelAdmin.php">Regresar al panel</a>';
     ?>
 </div>
     </section>

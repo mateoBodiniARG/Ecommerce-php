@@ -48,13 +48,13 @@
             echo '<label for="imagen">URL de la Imagen:</label>';
             echo '<input type="text" name="imagen" value="' . $fila['imagen'] . '" required><br>';
             echo '<label for="stock">Stock:</label>';
-            echo '<input type="text" readonly name="stock" value="' . $fila['stock'] . '" required><br>';
+            echo '<input type="text" disabled name="stock" value="' . $fila['stock'] . '" required><br>';
             
             echo '<label for="id_marca">Marca:</label>';
             echo '<select name="id_marca">';
             while ($marca = $resultadoMarcas->fetch_assoc()) {
-                $selected = ($marca['id'] == $fila['id_marca']) ? 'selected' : '';
-                echo "<option value='{$marca['id']}' $selected>{$marca['nombre']}</option>";
+                $selected = ($marca['id_marca'] == $fila['id_marca']) ? 'selected' : '';
+                echo "<option value='{$marca['id_marca']}' $selected>{$marca['nombre']}</option>";
             }
             echo '</select>';
 
@@ -72,9 +72,8 @@
             }
 
             echo '<input type="submit" value="Guardar Modificaciones">';
-            echo '<a href="../modificarProductos/modificarProducto.php" class="regresarAdmin">Regresar</a>';
+            echo '<a href="../modificarProductos/" class="regresarAdmin">Regresar</a>';
             echo '</form>';
-
         } else {
             echo "Producto no encontrado.";
         }

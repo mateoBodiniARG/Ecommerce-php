@@ -23,7 +23,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $imagen = $_POST["imagen"];
     $stock = $_POST["stock"];
     $estado = $_POST["estado"];
-    $marca = $_POST["marca"]; 
+    $marca = $_POST["id_marca"]; 
     $motivo = $_POST["motivo"];
 
     // Conexión a la base de datos

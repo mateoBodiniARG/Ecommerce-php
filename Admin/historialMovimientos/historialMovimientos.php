@@ -15,10 +15,11 @@ if ($conexion->connect_error) {
     die("Error de conexión: " . $conexion->connect_error);
 }
 
-// Consulta para obtener el historial de movimientos con nombres de productos
+// Consulta para obtener el historial de movimientos con nombres de productos y fecha formateada
 $consulta = 
 "SELECT movimientos_inventario.id, movimientos_inventario.id_producto, productos.nombre 
-AS nombre_producto, movimientos_inventario.cantidad, movimientos_inventario.motivo, movimientos_inventario.descripcion, movimientos_inventario.fecha_registro 
+AS nombre_producto, movimientos_inventario.cantidad, movimientos_inventario.motivo, movimientos_inventario.descripcion, 
+DATE_FORMAT(movimientos_inventario.fecha_registro, '%d/%m/%Y') AS fecha_registro 
 FROM movimientos_inventario 
 INNER JOIN productos 
 ON movimientos_inventario.id_producto = productos.id 
