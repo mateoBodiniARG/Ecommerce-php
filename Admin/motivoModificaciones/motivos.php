@@ -17,7 +17,7 @@ if ($conexion->connect_error) {
 
 // Consulta para obtener los motivos de modificaciones con el nombre del producto activo 
 $consulta = 
-"SELECT ticketmotivo.id, productos.nombre AS nombre_producto, ticketmotivo.motivo, ticketmotivo.fecha_creacion
+"SELECT ticketmotivo.id, productos.nombre AS nombre_producto, ticketmotivo.motivo, DATE_FORMAT(ticketmotivo.fecha_creacion,'%d/%m/%Y') AS fecha_registro 
 FROM ticketmotivo
 INNER JOIN productos ON ticketmotivo.id_producto = productos.id
 WHERE productos.activo = 1";
@@ -54,7 +54,7 @@ $totalModificaciones = $resultado->num_rows;
                         <li>
                             <strong>Producto:</strong> <?php echo $fila["nombre_producto"]; ?><br>
                             <strong>Motivo:</strong> <?php echo $fila["motivo"]; ?><br>
-                            <strong>Fecha de modificacion:</strong> <?php echo $fila["fecha_creacion"]; ?>
+                            <strong>Fecha de modificacion:</strong> <?php echo $fila["fecha_registro"]; ?>
                         </li>
                     <?php endwhile; ?>
                 </ul> 
