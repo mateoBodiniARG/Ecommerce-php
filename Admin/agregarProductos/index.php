@@ -8,7 +8,7 @@
   </head>
   <body>
     <header>
-      <h1>Agregar Producto</h1>
+      <h1>Cargar producto</h1>
     </header>
     <main>
       <form method="post" action="agregarProd.php">
@@ -34,16 +34,16 @@
 
         <div>
           <?php
-          // Realiza la conexión a la base de datos
+          // Conexión a la base de datos
           include('../../config/config.php');
           $conexion = new mysqli($servername, $username, $password, $dbname);
 
-          // Verifica la conexión
+          //  Verificar la conexión
           if ($conexion->connect_error) {
             die("Error de conexión: " . $conexion->connect_error);
           }
 
-          // Consulta SQL para obtener todas las marcas
+          //  Consulta SQL para obtener las marcas
           $consultaMarcas = "SELECT * FROM marcas";
           $resultadoMarcas = $conexion->query($consultaMarcas);
           echo '<label for="Marca">Marca:</label>';

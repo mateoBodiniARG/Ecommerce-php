@@ -7,13 +7,14 @@
     <title>Lista de Productos</title>
 </head>
 <body>
-<section class="buscarProducto">
-    <h1>Buscar producto</h1>
-    <form method="POST" class="form-buscar">
-        <input type="text" name="busqueda" placeholder="EJ: monitor samsung">
-        <input type="submit" name="buscar" value="Buscar">
-    </form>
-</section>
+    <a href="../panelAdmin.php">Regresar al panel</a>
+    <section class="buscarProducto">
+        <h1>Buscar producto</h1>
+        <form method="POST" class="form-buscar">
+            <input type="text" name="busqueda" placeholder="EJ: monitor samsung">
+            <input type="submit" name="buscar" value="Buscar">
+        </form>
+    </section>
 
 <section class="filtroProductos">
     
@@ -103,10 +104,9 @@
         echo '</div>';
         
     }
-    echo '<a href="../panelAdmin.php">Regresar al panel</a>';
     ?>
 </div>
-    </section>
+</section>
     
     <script src="script.js"></script>
 </body>

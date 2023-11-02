@@ -21,10 +21,7 @@ FROM movimientos_inventario
 INNER JOIN productos 
 ON movimientos_inventario.id_producto = productos.id";
 
-//Preguntar a Dante porque no me estaria tomando los extremos, por ejemplo:
-//Fecha desde: 19/10/2023
-//Fecha hasta: 23/10/2023
-// El 19 y 23 no lo muestra.
+// Si se han enviado las fechas, se agrega el filtro a la consulta 
 if ($fecha_desde && $fecha_hasta) {
     $consulta .= " WHERE movimientos_inventario.fecha_registro >= '$fecha_desde' AND movimientos_inventario.fecha_registro <= '$fecha_hasta'";;
 }
@@ -51,9 +48,9 @@ $resultado = $conexion->query($consulta);
             <h2>Historial de Movimientos</h2>
             <form method="post" action="historialMovimientosResultado.php">
                 <label for="fecha_desde">Fecha desde:</label>
-                <input type="date" name="fecha_desde" id="fecha_desde">
+                <input type="date" name="fecha_desde">
                 <label for="fecha_hasta">Fecha hasta:</label>
-                <input type="date" name="fecha_hasta" id="fecha_hasta">
+                <input type="date" name="fecha_hasta">
                 <input type="submit" value="Filtrar">
             </form>
 

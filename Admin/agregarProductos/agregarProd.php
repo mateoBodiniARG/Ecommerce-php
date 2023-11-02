@@ -55,7 +55,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         ";
     } 
     else {
-        // El producto no existe, procede a insertarlo
+        // El producto no existe, se agrega a la base de datos
         $consulta = "INSERT INTO productos (nombre, precio, imagen, stock, id_marca) VALUES ('$nombre', '$precio', '$imagen', '$stock','$id_marca')";
 
         if ($conexion->query($consulta) === TRUE) {

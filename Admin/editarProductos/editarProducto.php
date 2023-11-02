@@ -67,8 +67,8 @@
                 echo '<option value="disponible" selected>Disponible</option>';
                 echo '<option value="no disponible">No Disponible</option>';
             } else {
-                echo '<option value="disponible">Disponible</option>';
                 echo '<option value="no disponible" selected>No Disponible</option>';
+                echo '<option value="disponible">Disponible</option>';
             }
 
             echo '<input type="submit" value="Guardar Modificaciones">';

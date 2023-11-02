@@ -17,7 +17,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET" && isset($_GET["nombre"])) {
     if ($result->num_rows > 0) {
         echo "existe";
     } else {
-        echo "no_existe";
+        echo "no existe";
     }
 
     $conn->close();
