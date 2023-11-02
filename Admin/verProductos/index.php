@@ -27,7 +27,7 @@
     <h3>Filtrar productos por estado:</h3>
     <form method="POST">
         <select name="filtroEstado">
-            <option value="todos" <?php echo ($filtroEstado=='todos')?'selected="selected"':''; ?>>Todos</option>
+            <option value="todos" <?php echo ($filtroEstado=='todos')?'selected="selected"':''; ?>>Todos</option> 
             <option value="activos" <?php echo ($filtroEstado=='activos')?'selected="selected"':''; ?>>Activos</option>
             <option value="inactivos" <?php echo ($filtroEstado=='inactivos')?'selected="selected"':''; ?>>Inactivos</option>
         </select>
@@ -59,7 +59,7 @@
         }
 
         // Consulta a la base de datos 
-        $sql = "SELECT * FROM productos WHERE 1=1"; 
+        $sql = "SELECT * FROM productos WHERE 1"; 
 
         if ($filtroEstado === "activos") {
             $sql .= " AND activo = 1";
@@ -99,7 +99,6 @@
         }else if($fila ['activo'] == 1){
             echo "<button class='desactivar-boton' onclick='desactivarProducto(" . $fila['id'] . ")'>Desactivar</button>";
         }
-        
         echo '</div>';
         echo '</div>';
         

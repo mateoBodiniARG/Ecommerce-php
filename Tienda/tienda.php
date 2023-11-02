@@ -14,7 +14,6 @@
 
     <section class="productos">
         <?php
-        // Establece la conexión a la base de datos y guarda los datos en variables
         include('../config/config.php');
 
 

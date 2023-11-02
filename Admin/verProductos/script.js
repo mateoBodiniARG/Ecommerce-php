@@ -4,7 +4,7 @@ function desactivarProducto(id) {
         // Ruta del archivo PHP que manejará la desactivación
         let url = "desactivarProducto.php?id=" + id;
 
-        // Realizar la solicitud mediante Fetch 
+        // Realizar la solicitud 
         fetch(url, {
             method: "POST"
         })

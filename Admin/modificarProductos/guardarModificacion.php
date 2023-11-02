@@ -36,7 +36,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     // Validación para no permitir establecer "Disponible" si el stock es 0 o menos
-    if ($estado === "Disponible" && $stock <= 0) {
+    if ($estado === "disponible" && $stock <= 0) {
         echo '<div class="error-container">';
         echo '<p class="error-mensaje">No se puede establecer el estado a "Disponible" si el stock es 0 o menos.</p>';
         echo '<a href="./modificarProducto.php">Volver a intentar</a>';

@@ -9,7 +9,7 @@
 <body>
  <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Conexión a la base de datos (reemplaza con tus propios datos)
+    // Conexión a la base de datos
    include('../../config/config.php');
     $nombre = $_POST["nombre"];
 

@@ -14,7 +14,7 @@ $conexion = new mysqli($servername, $username, $password, $dbname);
 if ($conexion->connect_error) {
     die("Error de conexión: " . $conexion->connect_error);
 }
-
+// Si se ha enviado la fecha desde/hasta el formulario, se guarda en la variable, de lo contrario se guarda null
 $fecha_desde = isset($_POST["fecha_desde"]) ? $_POST["fecha_desde"] : null;
 $fecha_hasta = isset($_POST["fecha_hasta"]) ? $_POST["fecha_hasta"] : null;
 

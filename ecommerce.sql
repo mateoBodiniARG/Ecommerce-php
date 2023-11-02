@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.0
+-- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 27-10-2023 a las 05:39:36
--- Versión del servidor: 10.4.27-MariaDB
--- Versión de PHP: 8.1.12
+-- Tiempo de generación: 02-11-2023 a las 04:22:24
+-- Versión del servidor: 10.4.28-MariaDB
+-- Versión de PHP: 8.2.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -85,7 +85,8 @@ CREATE TABLE `movimientos_inventario` (
 
 INSERT INTO `movimientos_inventario` (`id`, `id_producto`, `cantidad`, `motivo`, `descripcion`, `fecha_registro`) VALUES
 (1, 9, 10, 'aumentar', 'Se han comprado 10 unidades', '2023-10-24 02:40:29'),
-(2, 11, 50, 'aumentar', 'Se han adquirido 50 nuevas unidades', '2023-10-25 01:44:10');
+(2, 11, 50, 'aumentar', 'Se han adquirido 50 nuevas unidades', '2023-10-25 01:44:10'),
+(3, 18, 30, 'aumentar', 'Se han adquirido 30 nuevas unidades', '2023-11-02 01:32:23');
 
 -- --------------------------------------------------------
 
@@ -110,14 +111,14 @@ CREATE TABLE `productos` (
 --
 
 INSERT INTO `productos` (`id`, `nombre`, `precio`, `imagen`, `stock`, `estado`, `activo`, `cantidad_vendida`, `id_marca`) VALUES
-(1, 'HyperX Cirro Buds Pro', '110.00', 'https://firebasestorage.googleapis.com/v0/b/techvibes-d125a.appspot.com/o/buds.png?alt=media&token=69326c83-160c-4401-993d-d00c3396f540&_gl=1*80nyce*_ga*MjAzMDQwNzQwLjE2OTY5NjUzMTM3MC41Ni4wLjA.', 97, 'disponible', 1, 9, 1),
-(2, 'Hyperx Alloy Origins', '30.00', 'https://hyperx.com/cdn/shop/files/hyperx_alloy_origins_us_1_top_down_900x.jpg?v=1688318371', 0, 'no disponible', 0, 0, 1),
-(3, 'Notebook Lenovo V15 Gen 2', '670.00', 'https://firebasestorage.googleapis.com/v0/b/techvibes-d125a.appspot.com/o/677172-MLA48635279078_122021-F.jpg?alt=media&token=46b01072-541d-498f-8bb3-a623f36df35b&_gl=1*1y8psof*_ga*MjAzMDQwNzQwLjE2OTY1MzAzNzM.*_ga_CW55HF8NVT*MTY5NzA1OTMzOS4zLjEuMTY5NzA1OTQ', 556, 'disponible', 1, 4, 2),
-(4, 'Hyperx quadcast S', '280.00', 'https://firebasestorage.googleapis.com/v0/b/techvibes-d125a.appspot.com/o/microphone.png?alt=media&token=b085df44-d251-4b1b-8bfd-615fe0c6f69f&_gl=1*1t6keyq*_ga*MjAzMDQwNzQwLjE2OTY1MzAzNzM.*_ga_CW55HF8NVT*MTY5NzQ4NTUxMC41LjEuMTY5NzQ4NTk0NS42MC4wLjA.', 0, 'no disponible', 0, 0, 1),
-(9, 'Auriculares hyperx', '180.00', 'https://firebasestorage.googleapis.com/v0/b/techvibes-d125a.appspot.com/o/auris.png?alt=media&token=93635679-698f-4e1d-8a41-88e740719212&_gl=1*1h756ws*_ga*MjAzMDQwNzQwLjE2OTY1MzAzNzM.*_ga_CW55HF8NVT*MTY5NzQ5MjM3OS42LjEuMTY5NzQ5MjM5Ni40My4wLjA.', 10, 'disponible', 1, 0, 1),
-(10, 'Mouse hyperx', '100.00', 'https://firebasestorage.googleapis.com/v0/b/techvibes-d125a.appspot.com/o/mouse.png?alt=media&token=2e821b49-defd-4b09-b486-c2c7115a6298&_gl=1*15iphxt*_ga*MjAzMDQwNzQwLjE2OTY1MzAzNzM.*_ga_CW55HF8NVT*MTY5NzUwMjQ2OS43LjEuMTY5NzUwMjQ4OS40MC4wLjA.', 10, 'disponible', 1, 0, 1),
-(11, 'HyperX Vision S | Webcam', '110.00', 'https://firebasestorage.googleapis.com/v0/b/techvibes-d125a.appspot.com/o/HyperX%20Vision%20S%20%20Webcam.png?alt=media&token=3c9fe7a5-1ad9-4a50-ad58-3ba65980382d&_gl=1*1qsgsj9*_ga*MjAzMDQwNzQwLjE2OTY1MzAzNzM.*_ga_CW55HF8NVT*MTY5NzY4MDIyNC44LjEuMTY5NzY4MD', 129, 'no disponible', 1, 0, 1),
-(18, 'Monitor samsung', '190.00', 'https://firebasestorage.googleapis.com/v0/b/techvibes-d125a.appspot.com/o/monitorSamsung.png?alt=media&token=a8f3a1eb-e2be-4e3c-9568-5864117f491e&_gl=1*1kvr967*_ga*MjAzMDQwNzQwLjE2OTY1MzAzNzM.*_ga_CW55HF8NVT*MTY5ODE5NzI2NC45LjEuMTY5ODE5ODM4MC4xOS4wLjA.', 10, 'no disponible', 1, 0, 4);
+(1, 'HyperX Cirro Buds Pro', 110.00, 'https://firebasestorage.googleapis.com/v0/b/techvibes-d125a.appspot.com/o/buds.png?alt=media&token=69326c83-160c-4401-993d-d00c3396f540&_gl=1*80nyce*_ga*MjAzMDQwNzQwLjE2OTY5NjUzMTM3MC41Ni4wLjA.', 97, 'no disponible', 1, 9, 1),
+(2, 'Hyperx Alloy Origins', 30.00, 'https://hyperx.com/cdn/shop/files/hyperx_alloy_origins_us_1_top_down_900x.jpg?v=1688318371', 0, 'no disponible', 1, 0, 1),
+(3, 'Notebook Lenovo V15 Gen 2', 670.00, 'https://firebasestorage.googleapis.com/v0/b/techvibes-d125a.appspot.com/o/677172-MLA48635279078_122021-F.jpg?alt=media&token=46b01072-541d-498f-8bb3-a623f36df35b&_gl=1*1y8psof*_ga*MjAzMDQwNzQwLjE2OTY1MzAzNzM.*_ga_CW55HF8NVT*MTY5NzA1OTMzOS4zLjEuMTY5NzA1OTQ', 554, 'disponible', 1, 6, 2),
+(4, 'Hyperx quadcast S', 280.00, 'https://firebasestorage.googleapis.com/v0/b/techvibes-d125a.appspot.com/o/microphone.png?alt=media&token=b085df44-d251-4b1b-8bfd-615fe0c6f69f&_gl=1*1t6keyq*_ga*MjAzMDQwNzQwLjE2OTY1MzAzNzM.*_ga_CW55HF8NVT*MTY5NzQ4NTUxMC41LjEuMTY5NzQ4NTk0NS42MC4wLjA.', 0, 'disponible', 0, 0, 1),
+(9, 'Auriculares hyperx', 180.00, 'https://firebasestorage.googleapis.com/v0/b/techvibes-d125a.appspot.com/o/auris.png?alt=media&token=93635679-698f-4e1d-8a41-88e740719212&_gl=1*1h756ws*_ga*MjAzMDQwNzQwLjE2OTY1MzAzNzM.*_ga_CW55HF8NVT*MTY5NzQ5MjM3OS42LjEuMTY5NzQ5MjM5Ni40My4wLjA.', 10, 'disponible', 1, 0, 1),
+(10, 'Mouse hyperx', 100.00, 'https://firebasestorage.googleapis.com/v0/b/techvibes-d125a.appspot.com/o/mouse.png?alt=media&token=2e821b49-defd-4b09-b486-c2c7115a6298&_gl=1*15iphxt*_ga*MjAzMDQwNzQwLjE2OTY1MzAzNzM.*_ga_CW55HF8NVT*MTY5NzUwMjQ2OS43LjEuMTY5NzUwMjQ4OS40MC4wLjA.', 10, 'disponible', 1, 0, 1),
+(11, 'HyperX Vision S | Webcam', 110.00, 'https://firebasestorage.googleapis.com/v0/b/techvibes-d125a.appspot.com/o/HyperX%20Vision%20S%20%20Webcam.png?alt=media&token=3c9fe7a5-1ad9-4a50-ad58-3ba65980382d&_gl=1*1qsgsj9*_ga*MjAzMDQwNzQwLjE2OTY1MzAzNzM.*_ga_CW55HF8NVT*MTY5NzY4MDIyNC44LjEuMTY5NzY4MD', 129, 'no disponible', 0, 0, 1),
+(18, 'Monitor samsung', 190.00, 'https://firebasestorage.googleapis.com/v0/b/techvibes-d125a.appspot.com/o/monitorSamsung.png?alt=media&token=a8f3a1eb-e2be-4e3c-9568-5864117f491e&_gl=1*1kvr967*_ga*MjAzMDQwNzQwLjE2OTY1MzAzNzM.*_ga_CW55HF8NVT*MTY5ODE5NzI2NC45LjEuMTY5ODE5ODM4MC4xOS4wLjA.', 36, 'disponible', 1, 4, 4);
 
 -- --------------------------------------------------------
 
@@ -146,7 +147,16 @@ INSERT INTO `ticketmotivo` (`id`, `id_producto`, `motivo`, `fecha_creacion`) VAL
 (7, 2, 'No hay stock de este producto', '2023-10-17 00:29:32'),
 (8, 4, 'No hay stock de este producto', '2023-10-17 20:08:39'),
 (9, 9, 'Estaba mal escrito el nombre del producto', '2023-10-17 20:24:02'),
-(10, 1, 'Se ha aumentado el stock', '2023-10-19 02:42:56');
+(10, 1, 'Se ha aumentado el stock', '2023-10-19 02:42:56'),
+(11, 18, 'Ha pasado de inactivo a activo', '2023-11-02 01:30:59'),
+(12, 11, 'Se ha modificado el precio', '2023-11-02 01:55:11'),
+(13, 1, 'Prueba', '2023-11-02 02:06:48'),
+(14, 1, 'Estaba mal escrito el nombre del producto', '2023-11-02 02:07:09'),
+(15, 11, 'Se ha modificado el precio', '2023-11-02 02:07:52'),
+(16, 1, 'Se ha modificado el precio', '2023-11-02 02:08:18'),
+(17, 4, 'No hay stock de este producto', '2023-11-02 02:25:47'),
+(18, 2, 'No hay stock de este producto', '2023-11-02 02:26:41'),
+(19, 2, 'No hay stock de este producto', '2023-11-02 02:27:40');
 
 --
 -- Índices para tablas volcadas
@@ -204,7 +214,7 @@ ALTER TABLE `marcas`
 -- AUTO_INCREMENT de la tabla `movimientos_inventario`
 --
 ALTER TABLE `movimientos_inventario`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT de la tabla `productos`
@@ -216,7 +226,7 @@ ALTER TABLE `productos`
 -- AUTO_INCREMENT de la tabla `ticketmotivo`
 --
 ALTER TABLE `ticketmotivo`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- Restricciones para tablas volcadas

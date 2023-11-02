@@ -1,10 +1,9 @@
 <?php
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    // Recupera los datos del formulario
+    // Recuperar los datos del formulario
     $idProducto = $_POST['id_producto'];
     $cantidad = $_POST['cantidad'];
 
-    // Realiza una consulta SQL para obtener el stock actual y la cantidad vendida del producto
     include('../config/config.php');
 
     $conexion = new mysqli($servername, $username, $password, $dbname);
