@@ -26,7 +26,6 @@ if (!isset($_SESSION["usuario"])) {
                 <a href="./modificarProductos/modificarProducto.php">Modificar Producto</a> 
                 <a href="./verProductos/index.php">Ver Productos</a> 
                 <a href="./marcas/agregarMarca.html">Cargar nueva marca</a> 
-                <a href="./registrarAdmin/registro.html">Agregar administrador</a>
                 <a href="./motivoModificaciones/motivos.php">Motivos de Modificaciones</a> 
                 <a href="./historialMovimientos/historialMovimientos.php">Historial movimientos</a> 
                 <a href="./estadisticas/estadisticas.php">ESTADISTICAS</a> 
